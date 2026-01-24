@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\User ;
 use Illuminate\Http\Request;
 
 class PointController extends Controller
@@ -19,8 +19,8 @@ class PointController extends Controller
         $user = auth()->user();
         if ($user->point >= 50) {
             $user->coupon = $user->coupon + 1;
-            $user->point - 50;//FIXME2
-            $user->save();
+            $user->point = $user->point - 50;
+            //$user->save();
 
             $message = "Points converted successfully";
 

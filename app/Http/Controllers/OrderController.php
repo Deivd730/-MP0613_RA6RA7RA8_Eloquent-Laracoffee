@@ -44,7 +44,7 @@ class OrderController extends Controller
             $data = [
                 "product_id" => $product->id,
                 "user_id" => (int) auth()->user()->id,
-                "quantity" => $validatedData["quantity"]-1,//FIXME1
+                "quantity" => $validatedData["quantity"]-1,
                 "address" => $validatedData["address"],
                 "shipping_address" => $validatedData["address"],
                 "total_price" => $validatedData["total_price"],
