@@ -20,7 +20,7 @@ class PointController extends Controller
         if ($user->point >= 50) {
             $user->coupon = $user->coupon + 1;
             $user->point = $user->point - 50;
-            //$user->save();
+            $user->save();
 
             $message = "Points converted successfully";
 
